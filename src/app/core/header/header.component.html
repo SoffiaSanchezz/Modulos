@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a routerLink="/" class="navbar-link">Home</a>
+            <a routerLink="/productos" class="navbar-link">Productos</a>
+            <!-- Otros enlaces adicionales según lo necesario -->
+        </div>
+
+        <!-- Mostrar Logout si el usuario está autenticado, o Login si no lo está -->
+        <button *ngIf="authService.isLoggedIn()" class="navbar-button" (click)="logout()">
+            Logout
+        </button>
+        <a *ngIf="!authService.isLoggedIn()" routerLink="/login" class="navbar-link">
+            Login
+        </a>
+    </nav>
+</header>

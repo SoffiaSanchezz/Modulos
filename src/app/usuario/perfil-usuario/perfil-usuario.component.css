@@ -1,0 +1,28 @@
+.user-profile {
+    max-width: 350px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.user-profile h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #4a90e2;
+    /* Puedes cambiar este color para que combine con tu tema */
+}
+
+.profile-content p {
+    font-size: 1em;
+    margin: 8px 0;
+}
+
+.profile-content strong {
+    color: #4a90e2;
+    /* Color para resaltar los títulos */
+}

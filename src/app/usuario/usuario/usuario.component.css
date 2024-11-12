@@ -1,0 +1,123 @@
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lista-usuarios {
+    flex: 1;
+    max-width: 500px;
+}
+
+.lista-usuarios h3 {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.usuario-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.usuario-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.usuario-info {
+    display: flex;
+    align-items: center;
+}
+
+.icono-usuario {
+    margin-right: 12px;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.usuario-item p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.btn-detalle {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-detalle:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+.card-formulario {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-formulario h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-usuario label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.formulario-usuario input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn-agregar {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #218838;
+}
