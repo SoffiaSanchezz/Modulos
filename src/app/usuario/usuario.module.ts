@@ -5,7 +5,7 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { UsuarioService } from '../usuario.service';
 import { UsuarioComponent } from './usuario/usuario.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
+    UsuarioRoutingModule,
+    ReactiveFormsModule,
     UsuarioRoutingModule
   ],
   providers: [UsuarioService],

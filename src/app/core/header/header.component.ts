@@ -15,4 +15,9 @@ export class HeaderComponent {
     this.authService.logout();
     this.router.navigate(['/login']);  // Redirige al usuario a la página de login
   }
+
+
+  click1(){
+    console.log('se hizp click')
+  }
 }

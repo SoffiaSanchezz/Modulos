@@ -1,2 +1,13 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
+
+<div class="container mt-5">
+  <section class="text-center">
+    <h2>Bienvenido a Angular</h2>
+    <p class="lead">{{ 'angular es genial' | capitalizar }}</p>
+  </section>
+
+  <section class="mt-4">
+    <p class="alert alert-info p-3 text-center" appResaltar>Este texto se resalta al pasar el ratón</p>
+  </section>
+</div>

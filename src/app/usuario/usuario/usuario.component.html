@@ -1,24 +1,52 @@
-<div class="contenedor-principal">
-    <div class="lista-usuarios">
-        <h3>Lista de Usuarios</h3>
-        <div class="usuario-item" *ngFor="let usuario of usuarios">
-                <p>{{ usuario.nombre }}</p>
-            <button [routerLink]="['/detalle', usuario.id]" class="btn-detalle">Ver Detalles</button>
-        </div>
-    </div>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Lista de Usuarios -->
+        <div class="col-md-6 lista-usuarios">
+            <h3>Lista de Usuarios</h3>
+            <div *ngFor="let usuario of usuarios" class="usuario-item">
+                <!-- Avatar e información del usuario -->
+                <div class="usuario-info">
+                    <!-- Ícono de usuario -->
+                    <i class="bi bi-person-circle icono-usuario"></i>
 
-    <div class="card-formulario">
-        <h3>Agregar Nuevo Usuario</h3>
-        <form (ngSubmit)="agregarUsuario()" class="formulario-usuario">
-            <label>
-                Nombre:
-                <input type="text" [(ngModel)]="nuevoUsuario.nombre" name="nombre" required />
-            </label>
-            <label>
-                Email:
-                <input type="email" [(ngModel)]="nuevoUsuario.email" name="email" required />
-            </label>
-            <button type="submit" class="btn-agregar">Agregar Usuario</button>
-        </form>
+                    <!-- Nombre del usuario -->
+                    <p>{{ usuario.nombre }}</p>
+                </div>
+
+                <!-- Botón de Ver Detalles -->
+                <button [routerLink]="['/detalle', usuario.id]" class="btn btn-detalle">Ver Detalles</button>
+            </div>
+        </div>
+
+        <!-- Formulario de Nuevo Usuario -->
+        <div class="col-md-6">
+            <div class="card card-formulario">
+                <h3>Agregar Nuevo Usuario</h3>
+                <form (ngSubmit)="agregarUsuario()" #usuarioForm="ngForm" novalidate>
+                    <div class="formulario-usuario">
+                        <div class="form-group mb-3">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" [(ngModel)]="nuevoUsuario.nombre" name="nombre"
+                                class="form-control" required #nombre="ngModel" />
+                            <div *ngIf="nombre.invalid && nombre.touched" class="alerta alerta-error">
+                                <i class="icono-alerta">&#9888;</i> El nombre es requerido.
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" [(ngModel)]="nuevoUsuario.email" name="email"
+                                class="form-control" required email #email="ngModel" />
+                            <div *ngIf="email.invalid && email.touched" class="alerta alerta-error">
+                                <i class="icono-alerta">&#9888;</i> Debes ingresar un email válido.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-agregar" [disabled]="usuarioForm.invalid">Agregar
+                            Usuario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

@@ -10,8 +10,9 @@
         <button *ngIf="authService.isLoggedIn()" class="navbar-button" (click)="logout()">
             Logout
         </button>
-        <a *ngIf="!authService.isLoggedIn()" routerLink="/login" class="navbar-link">
+        <button *ngIf="!authService.isLoggedIn()" routerLink="/core/link" class="navbar-link" (click)="click1()">
             Login
-        </a>
+        </button>
     </nav>
 </header>
+<router-outlet></router-outlet>
